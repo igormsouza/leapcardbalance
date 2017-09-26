@@ -1,6 +1,3 @@
-# leapcardbalance
-Check the balance in your leapcard (Dublin bus card)
-
 Leapcard Balance===========================
 Check the balance in your leapcard (Dublin bus card)
 ### Want to contribute? Great!
