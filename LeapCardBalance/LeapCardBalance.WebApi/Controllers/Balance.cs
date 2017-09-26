@@ -51,6 +51,7 @@ namespace LeapCardBalance.WebApi.Controllers
             if (e.Error)
             {
                 result.Error = true;
+                result.ErrorMessage = e.ErrorMessage;
                 //MessageBox.Show("Error", "Error");
                 // Todo Log
             }
@@ -61,6 +62,8 @@ namespace LeapCardBalance.WebApi.Controllers
                 //MessageBox.Show("Your Balance is:" + e.Balance, "Balance");
                 // Todo Log
             }
+
+            result.Steps = e.Steps;
         }
     }
 }

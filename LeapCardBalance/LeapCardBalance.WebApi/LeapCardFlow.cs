@@ -24,6 +24,7 @@ namespace LeapCardBalance.WebApi
         public LeapCardFlow(DataLeapCard dataLeapCard)
         {
             Request = dataLeapCard;
+            Request.Steps = 1;
         }
 
         public async Task GetBalanceAsync()
@@ -47,6 +48,7 @@ namespace LeapCardBalance.WebApi
 
         private void MyThreadStartMethod()
         {
+            Request.Steps = 2;
             if (wb == null)
             {
                 wb = new WebBrowser();
@@ -61,8 +63,10 @@ namespace LeapCardBalance.WebApi
         {
             try
             {
+                Request.Steps = 3;
                 if (wb.Url.ToString().IndexOf("login.aspx") > -1 && !islogin)
                 {
+                    Request.Steps = 4;
                     wb.Document.GetElementById("ContentPlaceHolder1_UserName").InnerText = Request.Login;
                     wb.Document.GetElementById("ContentPlaceHolder1_Password").InnerText = Request.Password;
                     wb.Document.GetElementById("ContentPlaceHolder1_btnlogin").InvokeMember("click");
@@ -70,6 +74,7 @@ namespace LeapCardBalance.WebApi
                 }
                 else if (wb.Url.ToString().IndexOf("CardOverView.aspx") > -1)
                 {
+                    Request.Steps = 5;
                     string documentText = wb.DocumentText;
                     AnaliseData(documentText);
                     Request.OnCompleted();
@@ -78,6 +83,7 @@ namespace LeapCardBalance.WebApi
                 else if (islogin)
                 {
                     Request.Error = true;
+                    Request.ErrorMessage = "Login error.";
                     Request.OnCompleted();
                     Request.Finished = true;
                 }
@@ -85,6 +91,7 @@ namespace LeapCardBalance.WebApi
             catch (Exception ex)
             {
                 Request.Error = true;
+                Request.ErrorMessage = ex.Message;
                 Request.OnCompleted();
                 Request.Finished = true;
             }
@@ -92,6 +99,7 @@ namespace LeapCardBalance.WebApi
 
         public void AnaliseData(string documentText)
         {
+            Request.Steps = 6;
             var splitBalance = Regex.Split(documentText, "Travel Credit Balance")[1];
 
             splitBalance = splitBalance.Substring(0, splitBalance.IndexOf("<div style="));
@@ -105,6 +113,7 @@ namespace LeapCardBalance.WebApi
 
             Request.Balance = splitBalance;
             Request.CardNo = splitNo;
+            Request.Steps = 7;
             Request.OnCompleted();
         }
     }

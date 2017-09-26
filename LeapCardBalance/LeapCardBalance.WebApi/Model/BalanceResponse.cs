@@ -15,6 +15,10 @@ namespace LeapCardBalance.WebApi.Model
 
         public bool Error { get; set; }
 
+        public string ErrorMessage { get; set; }
+
+        public int Steps { get; set; }
+
         public string TimeLasted { get; internal set; }
     }
 }
