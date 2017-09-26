@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapCardBalance.WebApi", "LeapCardBalance.WebApi\LeapCardBalance.WebApi.csproj", "{A7F19496-8A7E-4821-AA25-FCD98FF83D0D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapCardRobot", "LeapCardRobot\LeapCardRobot\LeapCardRobot.csproj", "{E9E3B286-AE6B-441A-B66B-0ABEFE29B68A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeapCardBalance.WebApi", "LeapCardBalance.WebApi\LeapCardBalance.WebApi.csproj", "{A7F19496-8A7E-4821-AA25-FCD98FF83D0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{A7F19496-8A7E-4821-AA25-FCD98FF83D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7F19496-8A7E-4821-AA25-FCD98FF83D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7F19496-8A7E-4821-AA25-FCD98FF83D0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9E3B286-AE6B-441A-B66B-0ABEFE29B68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9E3B286-AE6B-441A-B66B-0ABEFE29B68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9E3B286-AE6B-441A-B66B-0ABEFE29B68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9E3B286-AE6B-441A-B66B-0ABEFE29B68A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
