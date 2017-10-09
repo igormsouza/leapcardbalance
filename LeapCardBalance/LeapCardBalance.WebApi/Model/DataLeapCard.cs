@@ -31,9 +31,11 @@ namespace LeapCardBalance.WebApi.Model
 
         public int Steps { get; set; }
 
+        public string DocumentText { get; set; }
+
         public void OnCompleted()
         {
-            var parameter = new EvDataLeapCardCompleted(Balance, CardNo, Error, ErrorMessage, Steps);
+            var parameter = new EvDataLeapCardCompleted(Balance, CardNo, Error, ErrorMessage, Steps, DocumentText);
 
             if (EvDataLeapCardCompleted != null)
                 EvDataLeapCardCompleted(this, parameter);
@@ -49,17 +51,20 @@ namespace LeapCardBalance.WebApi.Model
         public bool Error { get; set; }
 
         public string ErrorMessage { get; set; }
+
         public int Steps { get; set; }
+        public string DocumentText { get; set; }
 
         private EvDataLeapCardCompleted() { }
 
-        public EvDataLeapCardCompleted(string balance, string cardNo, bool error, string errorMessage, int steps)
+        public EvDataLeapCardCompleted(string balance, string cardNo, bool error, string errorMessage, int steps, string documentText)
         {
             Balance = balance;
             CardNo = cardNo;
             Error = error;
             ErrorMessage = errorMessage;
             Steps = steps;
+            DocumentText = documentText;
         }
     }
 }

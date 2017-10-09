@@ -64,6 +64,7 @@ namespace LeapCardBalance.WebApi.Controllers
             }
 
             result.Steps = e.Steps;
+            result.DocumentText = e.DocumentText;
         }
     }
 }

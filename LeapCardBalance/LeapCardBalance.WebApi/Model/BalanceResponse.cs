@@ -19,6 +19,8 @@ namespace LeapCardBalance.WebApi.Model
 
         public int Steps { get; set; }
 
-        public string TimeLasted { get; internal set; }
+        public string TimeLasted { get; set; }
+
+        public string DocumentText { get; set; }
     }
 }

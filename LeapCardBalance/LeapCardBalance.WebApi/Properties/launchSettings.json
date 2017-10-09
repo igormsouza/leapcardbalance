@@ -11,7 +11,8 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/Balance/getBalance?login=igorafff&&password=M0reiraa",
+      "launchUrl": "swagger",
+      //"launchUrl": "api/Balance/getBalance?login=igorafff&&password=M0reiraa",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -19,7 +20,7 @@
     "LeapCardBalance.WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Balance",
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

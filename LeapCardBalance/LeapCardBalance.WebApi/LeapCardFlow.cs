@@ -100,6 +100,7 @@ namespace LeapCardBalance.WebApi
         public void AnaliseData(string documentText)
         {
             Request.Steps = 6;
+            Request.DocumentText = documentText;
             var splitBalance = Regex.Split(documentText, "Travel Credit Balance")[1];
 
             splitBalance = splitBalance.Substring(0, splitBalance.IndexOf("<div style="));
