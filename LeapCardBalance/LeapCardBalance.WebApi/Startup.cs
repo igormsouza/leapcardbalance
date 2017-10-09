@@ -36,8 +36,8 @@ namespace LeapCardBalance.WebApi
             {
                 c.SwaggerDoc("v1", new Info
                 {
-                    Title = "Test things in .Net Core",
-                    Description = "A simple example ASP.NET Core Web API",
+                    Title = "LeapCard Balance",
+                    Description = "WebApi responsable to check your balance",
                     TermsOfService = "None",
                     Contact = new Contact { Name = "Igor Moreira", Email = "", Url = "https://igormsouza.wordpress.com/" },
                 });
