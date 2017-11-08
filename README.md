@@ -1,6 +1,8 @@
 # Leapcard Balance 
 
-Check the balance in your leapcard (Dublin bus card)
+Web Api created in .Net Core to access your LeapCard information. 
+
+Check the balance in your leapcard (Dublin bus card - www.leapcard.ie)
 
 ### Want to contribute? Great!
 You can also contribuite as tester, developer and with some suggestions to improve the project.
